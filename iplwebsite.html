@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>IPL T20 League</title>
+
+    <style>
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #facc15;
+            --light-color: #f3f4f6;
+            --dark-color: #111827;
+            --radius: 10px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: var(--light-color);
+            color: var(--dark-color);
+        }
+
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        nav {
+            background: var(--dark-color);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding: 12px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: var(--secondary-color);
+            color: black;
+            border-radius: var(--radius);
+        }
+
+        section {
+            padding: 50px 20px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            color: var(--primary-color);
+        }
+
+        /* ===== Video Styling ===== */
+        .video-container {
+            max-width: 900px;
+            margin: auto;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* ===== Teams Grid ===== */
+        .teams {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .team-card {
+            background: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: var(--radius);
+            transition: transform 0.3s;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .team-card:hover {
+            transform: scale(1.05);
+        }
+
+        /* ===== Table ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+
+        th {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        /* ===== Form ===== */
+        form {
+            max-width: 500px;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            background: white;
+            padding: 25px;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        input, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: var(--radius);
+        }
+
+        input:focus {
+            outline: 2px solid var(--secondary-color);
+        }
+
+        button {
+            padding: 10px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: var(--secondary-color);
+            color: black;
+        }
+
+        footer {
+            background: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Indian Premier League (IPL)</h1>
+    <p>The Biggest T20 Cricket League in the World</p>
+</header>
+
+<nav>
+    <a href="#video">Promo</a>
+    <a href="#teams">Teams</a>
+    <a href="#points">Points Table</a>
+    <a href="#register">Register</a>
+</nav>
+
+<!-- ===== VIDEO SECTION ===== -->
+<section id="video">
+    <h2>IPL Promo Video</h2>
+    <div class="video-container">
+        <video controls autoplay muted loop>
+            <source src="Promo_IPL_2025_Indian_Premier_League_2025_Cricket_T_Sports_T_Sports.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+<!-- ===== TEAMS SECTION ===== -->
+<section id="teams">
+    <h2>IPL Teams</h2>
+    <div class="teams">
+        <div class="team-card">Chennai Super Kings</div>
+        <div class="team-card">Mumbai Indians</div>
+        <div class="team-card">Royal Challengers Bangalore</div>
+        <div class="team-card">Kolkata Knight Riders</div>
+        <div class="team-card">Sunrisers Hyderabad</div>
+        <div class="team-card">Rajasthan Royals</div>
+    </div>
+</section>
+
+<!-- ===== POINTS TABLE ===== -->
+<section id="points">
+    <h2>Points Table</h2>
+    <table>
+        <tr>
+            <th>Team</th>
+            <th>Matches</th>
+            <th>Wins</th>
+            <th>Points</th>
+        </tr>
+        <tr>
+            <td>SRH</td>
+            <td>14</td>
+            <td>12</td>
+            <td>24</td>
+        </tr>
+        <tr>
+            <td>RCB</td>
+            <td>14</td>
+            <td>10</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>CSK</td>
+            <td>14</td>
+            <td>8</td>
+            <td>16</td>
+        </tr>
+        <tr>
+            <td>MI</td>
+            <td>14</td>
+            <td>7</td>
+            <td>14</td>
+        </tr>
+        <tr>
+            <td>KKR</td>
+            <td>14</td>
+            <td>6</td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>RR</td>
+            <td>14</td>
+            <td>6</td>
+            <td>12</td>
+        </tr>
+    </table>
+</section>
+
+<!-- ===== REGISTRATION FORM ===== -->
+<section id="register">
+    <h2>Fan Registration</h2>
+    <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <select required>
+            <option value="">Select Favorite Team</option>
+            <option>CSK</option>
+            <option>MI</option>
+            <option>RCB</option>
+            <option>KKR</option>
+        </select>
+        <input type="date" required>
+        <button type="submit">Register</button>
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2026 IPL Fan Website | Web Development Project</p>
+</footer>
+
+</body>
+</html>
