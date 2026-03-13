@@ -91,6 +91,7 @@
             border-radius: var(--radius);
             transition: transform 0.3s;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            cursor: pointer;
         }
 
         .team-card:hover {
@@ -177,10 +178,10 @@
 </header>
 
 <nav>
-    <a href="#video">Promo</a>
-    <a href="#teams">Teams</a>
-    <a href="#points">Points Table</a>
-    <a href="#register">Register</a>
+    <a href="#video" onclick="alert('Loading IPL Promo Video...')">Promo</a>
+    <a href="#teams" onclick="alert('Explore all IPL Teams!')">Teams</a>
+    <a href="#points" onclick="alert('Checking the latest Points Table...')">Points Table</a>
+    <a href="#register" onclick="alert('Register as an IPL Fan now!')">Register</a>
 </nav>
 
 <!-- ===== VIDEO SECTION ===== -->
@@ -197,12 +198,12 @@
 <section id="teams">
     <h2>IPL Teams</h2>
     <div class="teams">
-        <div class="team-card">Chennai Super Kings</div>
-        <div class="team-card">Mumbai Indians</div>
-        <div class="team-card">Royal Challengers Bangalore</div>
-        <div class="team-card">Kolkata Knight Riders</div>
-        <div class="team-card">Sunrisers Hyderabad</div>
-        <div class="team-card">Rajasthan Royals</div>
+        <div class="team-card" onclick="alert('Chennai Super Kings - Whistle Podu! 🦁')">Chennai Super Kings</div>
+        <div class="team-card" onclick="alert('Mumbai Indians - Duniya Hila Denge! 💙')">Mumbai Indians</div>
+        <div class="team-card" onclick="alert('Royal Challengers Bangalore - Ee Sala Cup Namde! 🔴')">Royal Challengers Bangalore</div>
+        <div class="team-card" onclick="alert('Kolkata Knight Riders - Korbo Lorbo Jeetbo! 💜')">Kolkata Knight Riders</div>
+        <div class="team-card" onclick="alert('Sunrisers Hyderabad - Rise Up! 🧡')">Sunrisers Hyderabad</div>
+        <div class="team-card" onclick="alert('Rajasthan Royals - Halla Bol! 💗')">Rajasthan Royals</div>
     </div>
 </section>
 
@@ -258,17 +259,17 @@
 <!-- ===== REGISTRATION FORM ===== -->
 <section id="register">
     <h2>Fan Registration</h2>
-    <form>
-        <input type="text" placeholder="Full Name" required>
-        <input type="email" placeholder="Email Address" required>
-        <select required>
+    <form onsubmit="handleRegister(event)">
+        <input type="text" id="fullName" placeholder="Full Name" required>
+        <input type="email" id="email" placeholder="Email Address" required>
+        <select id="team" required>
             <option value="">Select Favorite Team</option>
             <option>CSK</option>
             <option>MI</option>
             <option>RCB</option>
             <option>KKR</option>
         </select>
-        <input type="date" required>
+        <input type="date" id="dob" required>
         <button type="submit">Register</button>
     </form>
 </section>
@@ -276,6 +277,24 @@
 <footer>
     <p>&copy; 2026 IPL Fan Website | Web Development Project</p>
 </footer>
+
+<script>
+    function handleRegister(event) {
+        event.preventDefault();
+
+        var name = document.getElementById('fullName').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var team = document.getElementById('team').value;
+        var dob = document.getElementById('dob').value;
+
+        if (!name || !email || !team || !dob) {
+            alert('Please fill in all fields before registering!');
+            return;
+        }
+
+        alert('Welcome, ' + name + '! 🎉\nYou have successfully registered as a fan of ' + team + '!\nWe will send updates to: ' + email);
+    }
+</script>
 
 </body>
 </html>
